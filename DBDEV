@@ -1,0 +1,10 @@
+To access your new D1 Database in your Worker, add the following snippet to your configuration file:
+{
+  "d1_databases": [
+    {
+      "binding": "appbenessere_dev",
+      "database_name": "appbenessere-dev",
+      "database_id": "f85fd908-41c4-45a4-8913-c3ff751cd03f"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Dati reali del database: MAI su GitHub
+db/dump.sql
+db/*.dump.sql
+*.sqlite
+*.sqlite3
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# Segreti
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
