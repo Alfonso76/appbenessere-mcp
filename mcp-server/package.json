@@ -1,0 +1,30 @@
+{
+  "name": "appbenessere-mcp",
+  "version": "1.0.0",
+  "description": "MCP server su Cloudflare Workers per i dati di AppBenessere",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc",
+    "db:seed-local": "wrangler d1 execute appbenessere-dev --local --file=../db/dump.sql",
+    "tail": "wrangler tail"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "agents": "^0.34.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261120.1",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.166.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261119.1": true
+  },
+  "private": true
+}

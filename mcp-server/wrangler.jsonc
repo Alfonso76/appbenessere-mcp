@@ -1,0 +1,23 @@
+{
+  // Worker MCP separato dall'app AppBenessere: legge lo stesso schema D1 in sola lettura.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "appbenessere-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      // Copia di sviluppo. Si passa al DB reale solo in Fase 6.
+      "binding": "DB",
+      "database_name": "appbenessere-dev",
+      "database_id": "f85fd908-41c4-45a4-8913-c3ff751cd03f"
+    }
+  ],
+  // Secret: in locale da .dev.vars, in produzione con `wrangler secret put MCP_TOKEN`.
+  "secrets": { "required": ["MCP_TOKEN"] },
+  "vars": {
+    // Utente di cui il server espone i dati, finché non c'è l'autenticazione (Fase 6).
+    "MCP_USER_ID": "1"
+  }
+}
