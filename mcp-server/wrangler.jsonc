@@ -8,10 +8,10 @@
   "observability": { "enabled": true },
   "d1_databases": [
     {
-      // Copia di sviluppo. Si passa al DB reale solo in Fase 6.
+      // Copia di produzione per avere i dati aggiornati.
       "binding": "DB",
-      "database_name": "appbenessere-dev",
-      "database_id": "f85fd908-41c4-45a4-8913-c3ff751cd03f"
+      "database_name": "appbenessere",
+      "database_id": "bc665a27-4e9b-4b29-85d3-2439dfa362b7"
     }
   ],
   // Secret: in locale da .dev.vars, in produzione con `wrangler secret put MCP_TOKEN`.

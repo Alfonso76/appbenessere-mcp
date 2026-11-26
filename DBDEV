@@ -8,3 +8,4 @@ To access your new D1 Database in your Worker, add the following snippet to your
     }
   ]
 }
+//chiave mcp salvata in edge
